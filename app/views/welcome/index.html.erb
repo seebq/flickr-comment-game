@@ -1,0 +1,11 @@
+<h1>Flickr Fun!</h1>
+
+<%= image_tag(FlickrPhoto.get_large_image(@entry.photo_id), :size => "320x200") %>
+
+<% if rand < 0.5 %>
+  <p><%= @entry.incorrect_comment.html_safe %></p>
+  <!-- incorrect -->
+<% else %>
+  <p><%= @entry.correct_comment.html_safe %></p>
+  <!-- correct -->
+<% end %>

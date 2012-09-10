@@ -4,3 +4,28 @@ This game shows a random flickr photo, and a random comment.
 
 If you can guess if this comment goes with this photo, you win!
 
+To populate the game with data to play with, run:
+
+    rake import:data
+
+This populates entries:
+
+An entry has a picture and comment.
+
+An entry has a 50% chance that the comment that 
+goes with it is actually a comment that goes with the photo.
+
+It has an equal chance of being a comment from a different photo.
+
+entries
+=======
+id                  1
+photo_id            123456    # photo of a dog
+correct_comment     "What a cute dog!"
+incorrect_comment   "Man those are so big."
+
+http://flickr-comment-game.com/photo/1
+
+
+
+
